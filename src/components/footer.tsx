@@ -75,19 +75,6 @@ export const Footer = () => {
             </Button>
           </motion.div>
         </div>
-
-        {/* Bottom Text */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.6, duration: 0.6 }}
-          className="mt-8 pt-8 border-t border-border text-center"
-        >
-          <p className="text-muted-foreground text-xs">
-            Desenvolvido com React, TypeScript, Tailwind CSS e Framer Motion
-          </p>
-        </motion.div>
       </div>
     </footer>
   );
