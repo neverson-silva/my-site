@@ -74,21 +74,6 @@ export const Footer = () => {
               </a>
             </Button>
           </motion.div>
-
-          {/* Copyright */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.4, duration: 0.6 }}
-            className="text-center md:text-right"
-          >
-            <p className="text-muted-foreground text-sm flex items-center gap-2 justify-center md:justify-end">
-              © {currentYear} Feito com{" "}
-              <Heart className="w-4 h-4 text-red-500 fill-red-500 animate-pulse" />{" "}
-              por Neverson Silva
-            </p>
-          </motion.div>
         </div>
 
         {/* Bottom Text */}
