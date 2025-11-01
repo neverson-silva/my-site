@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const profileImage = process.env.NEXT_PUBLIC_PROFILE_URL;
@@ -9,7 +9,7 @@ export const Hero = () => {
   return (
     <section
       id="hero"
-      className="min-h-screen flex items-center justify-center pt-20 px-4"
+      className="min-h-screen flex items-center justify-center pt-10 px-4"
     >
       <div className="container mx-auto">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
@@ -88,21 +88,6 @@ const profile = {
             </motion.p>
 
             <motion.div
-              className="flex flex-wrap gap-4 justify-center lg:justify-start mb-8"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.8, duration: 0.6 }}
-            >
-              <Button size="lg" className="glow-cyan" asChild>
-                <a href="#projects">Ver Projetos</a>
-              </Button>
-              <Button size="lg" variant="outline" asChild>
-                <a href="#contact">Entrar em Contato</a>
-              </Button>
-            </motion.div>
-
-            {/* Social Links */}
-            <motion.div
               className="flex gap-4 justify-center lg:justify-start"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -149,21 +134,6 @@ const profile = {
             </motion.div>
           </div>
         </div>
-
-        {/* Scroll Indicator */}
-        <motion.div
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.2, duration: 0.6 }}
-        >
-          <motion.div
-            animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 1.5, repeat: Infinity }}
-          >
-            <ArrowDown className="w-6 h-6 text-primary" />
-          </motion.div>
-        </motion.div>
       </div>
     </section>
   );

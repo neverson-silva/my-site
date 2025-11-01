@@ -19,7 +19,7 @@ export const Footer = () => {
             transition={{ duration: 0.6 }}
             className="text-center md:text-left"
           >
-            <h3 className="text-2xl font-bold text-gradient mb-2">NB.dev</h3>
+            <h3 className="text-2xl font-bold text-gradient mb-2">nbs.dev</h3>
             <p className="text-muted-foreground text-sm">
               Desenvolvedor Fullstack Sênior
             </p>

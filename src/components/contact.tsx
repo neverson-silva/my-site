@@ -16,12 +16,29 @@ export const Contact = () => {
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success(
-      "Mensagem enviada com sucesso! Em breve entrarei em contato.",
-    );
-    setFormData({ name: "", email: "", message: "" });
+    setIsSubmitting(true);
+
+    try {
+      await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      toast.success("Mensagem enviada com sucesso!");
+      setFormData({ name: "", email: "", message: "" });
+    } catch (error) {
+      console.error("Erro ao enviar:", error);
+      toast.error("Erro ao enviar mensagem. Tente novamente mais tarde.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -38,7 +55,7 @@ export const Contact = () => {
             Entre em <span className="text-gradient">Contato</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Interessado em trabalhar junto? Vamos conversar sobre seu projeto
+            Interessado em trabalhar junto? Vamos conversar sobre seu projeto.
           </p>
         </motion.div>
 
@@ -197,9 +214,16 @@ export const Contact = () => {
                     type="submit"
                     size="lg"
                     className="w-full glow-cyan group"
+                    disabled={isSubmitting}
                   >
-                    <Send className="w-5 h-5 mr-2 group-hover:translate-x-1 transition-smooth" />
-                    Enviar Mensagem
+                    {isSubmitting ? (
+                      <span>Enviando...</span>
+                    ) : (
+                      <>
+                        <Send className="w-5 h-5 mr-2 group-hover:translate-x-1 transition-smooth" />
+                        Enviar Mensagem
+                      </>
+                    )}
                   </Button>
                 </form>
               </CardContent>

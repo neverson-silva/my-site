@@ -9,7 +9,7 @@ const experiences = [
   {
     period: "2024 - Atual",
     company: "Trinus.Co",
-    role: "Eng. de Software SR",
+    role: "Sr. Software Engineer",
     description:
       "Atuação focada no desenvolvimento e sustentação de integrações complexas com serviços financeiros, incluindo soluções de pagamento, onboarding digital, internet banking e canais de atendimento. Trabalho com arquiteturas orientadas a eventos, APIs seguras e escaláveis, garantindo a disponibilidade e conformidade regulatória das plataformas.",
     technologies: [

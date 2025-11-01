@@ -24,7 +24,6 @@ const skillCategories = [
       "HTML5 / CSS3",
       "Tailwind CSS",
       "React Native",
-      "Angular",
     ],
   },
   {
@@ -161,7 +160,8 @@ export const Skills = () => {
                     Sempre aprendendo e evoluindo
                   </p>
                   <p className="text-muted-foreground text-sm">
-                    Atualmente explorando: AI/ML, Web3 e Edge Computing
+                    Atualmente explorando novas abordagens em front-end,
+                    back-end e inteligência artificial
                   </p>
                 </div>
               </div>
