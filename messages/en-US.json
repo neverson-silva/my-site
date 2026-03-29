@@ -1,0 +1,92 @@
+{
+  "Navigation": {
+    "home": "Home",
+    "about": "About",
+    "experience": "Experience",
+    "projects": "Projects",
+    "skills": "Skills",
+    "contact": "Contact"
+  },
+  "Hero": {
+    "greeting": "Hello",
+    "name": "I'm Neverson Silva",
+    "description": "With over 10 years of experience, I work as a full stack developer specializing in financial solutions, payment systems, and BaaS (Banking as a Service) architecture.",
+    "code_comment": "//Full Stack Developer",
+    "role": "SR Software Engineer",
+    "company": "Trinus.Co",
+    "experience": "7+ years",
+    "segments": "\"Higher Education\", \"Logistics\", \"Payment Methods\", \"Banking\""
+  },
+  "About": {
+    "title1": "About",
+    "title2": "Me",
+    "subtitle": "Developer passionate about technology and innovation",
+    "heading": "Transforming ideas into digital solutions",
+    "p1": "I am a full stack developer with over 7 years of experience, building scalable systems and modern interfaces for different sectors. My trajectory began in the development of applications for virtual learning environments and student portals in a higher education institution (E-learning), evolving into complex corporate platforms and robust integrations.",
+    "p2_1": "Currently at ",
+    "p2_2": ", I work as an SR Software Engineer, creating solid architectures and implementing good development practices. I work with technologies such as Node.js, NestJS, React, and Next.js, acting in payment and internet banking solutions and our backoffice.",
+    "f1_t": "Corporate Platforms",
+    "f1_d": "Development of complex and scalable systems, integrating digital services and building reliable solutions for different sectors.",
+    "f2_t": "Architecture",
+    "f2_d": "Clean Architecture, DDD, microservices and event-driven design",
+    "f3_t": "Full Stack",
+    "f3_d": "Node.js, NestJS, React, Next.js and modern technologies",
+    "s1": "Years of Experience",
+    "s2": "Technologies",
+    "s3": "Commitment"
+  },
+  "Experience": {
+    "title1": "Professional",
+    "title2": "Experience",
+    "subtitle": "My trajectory of growth and evolution in technology",
+    "exp1_role": "Sr. Software Engineer",
+    "exp1_co": "Trinus.Co",
+    "exp1_desc": "Focused on developing and maintaining complex integrations with financial services, including payment solutions, digital onboarding, internet banking, and customer service channels. I work with event-driven architectures, secure and scalable APIs, ensuring platform availability and regulatory compliance.",
+    "exp1_time": "2024 - Present",
+    "exp2_role": "Software Engineer PL",
+    "exp2_co": "Sotran",
+    "exp2_desc": "As a Fullstack developer in a Payments squad, I focused on building interfaces and solutions for financial products, including digital accounts, card management, freight payments, and toll tags. I worked on various integration projects with Banking as a Service (Dock), prioritizing responsive interface creation for the company's financial Backoffice in React.js.\n\nMain activities and technologies:\n\nDevelopment of financial backoffice interfaces in React.js, focused on usability and responsiveness.\nImplementation of integrations with banking systems and financial services using Node.js and Kotlin, and application monitoring on Azure.",
+    "exp2_time": "2021 - 2024",
+    "exp3_role": "Mid-level Systems Analyst and Developer",
+    "exp3_co": "Tata Consultancy Service",
+    "exp3_desc": "Analysis, Development, and maintenance of systems in the Oil and Gas sector.",
+    "exp3_time": "2020 - 2021",
+    "exp4_role": "Junior Systems Analyst",
+    "exp4_co": "Cogna Educação",
+    "exp4_desc": "Development of educational solutions at Kroton Educacional.\n\nWorking on maintenance and development of new features in administrative systems using Grails and Groovy, and E-learning Student Portal building services in Nest.js(Node.js) and Spring Boot for integration with the new portal built with ServiceNow and Angular.",
+    "exp4_time": "2016 - 2020"
+  },
+  "Skills": {
+    "title1": "Skills &",
+    "title2": "Technologies",
+    "subtitle": "Tools and technologies I master to create complete solutions",
+    "cat1": "Frontend",
+    "cat2": "Backend",
+    "cat3": "Database",
+    "cat4": "DevOps & Cloud",
+    "cat5": "Architecture",
+    "cat6": "Tools and Methodologies",
+    "info_title": "Always learning and evolving",
+    "info_desc": "Currently exploring new approaches in front-end, back-end, and artificial intelligence"
+  },
+  "Contact": {
+    "title1": "Get in",
+    "title2": "Touch",
+    "subtitle": "Interested in working together? Let's talk about your project.",
+    "lets_talk": "Let's talk!",
+    "lets_talk_desc": "I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.",
+    "label_name": "Name",
+    "placeholder_name": "Your name",
+    "label_email": "Email",
+    "placeholder_email": "your@email.com",
+    "label_message": "Message",
+    "placeholder_message": "Tell me about your project...",
+    "submit": "Send Message",
+    "submitting": "Sending...",
+    "success": "Message sent successfully!",
+    "error": "Error sending message. Please try again later."
+  },
+  "Footer": {
+    "role": "Senior Fullstack Developer"
+  }
+}

@@ -3,27 +3,29 @@
 import { motion } from "framer-motion";
 import { Code2, Layers, Zap } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
-
-const features = [
-  {
-    icon: Code2,
-    title: "Plataformas Corporativas",
-    description:
-      "Desenvolvimento de sistemas complexos e escaláveis, integrando serviços digitais e construindo soluções confiáveis para diferentes setores.",
-  },
-  {
-    icon: Layers,
-    title: "Arquitetura",
-    description: "Clean Architecture, DDD, microserviços e event-driven design",
-  },
-  {
-    icon: Zap,
-    title: "Full Stack",
-    description: "Node.js, NestJS, React, Next.js e tecnologias modernas",
-  },
-];
+import { useTranslations } from "next-intl";
 
 export const About = () => {
+  const t = useTranslations("About");
+
+  const features = [
+    {
+      icon: Code2,
+      title: t("f1_t"),
+      description: t("f1_d"),
+    },
+    {
+      icon: Layers,
+      title: t("f2_t"),
+      description: t("f2_d"),
+    },
+    {
+      icon: Zap,
+      title: t("f3_t"),
+      description: t("f3_d"),
+    },
+  ];
+
   return (
     <section id="about" className="py-20 px-4">
       <div className="container mx-auto">
@@ -35,10 +37,10 @@ export const About = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl lg:text-5xl font-bold mb-4">
-            Sobre <span className="text-gradient">Mim</span>
+            {t("title1")} <span className="text-gradient">{t("title2")}</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Desenvolvedor apaixonado por tecnologia e inovação
+            {t("subtitle")}
           </p>
         </motion.div>
 
@@ -50,24 +52,14 @@ export const About = () => {
             transition={{ duration: 0.6 }}
           >
             <h3 className="text-2xl font-bold mb-6">
-              Transformando ideias em soluções digitais
+              {t("heading")}
             </h3>
             <div className="space-y-4 text-muted-foreground">
+              <p>{t("p1")}</p>
               <p>
-                Sou desenvolvedor full stack com mais de 7 anos de experiência,
-                construindo sistemas escaláveis e interfaces modernas para
-                diferentes setores. Minha trajetória começou no desenvolvimento
-                de aplicações para ambientes virtuais de aprendizagem e portais
-                do aluno em uma instituição de ensino superior (EAD), evoluindo
-                para plataformas corporativas complexas e integrações robustas.
-              </p>
-              <p>
-                Atualmente na{" "}
-                <strong className="text-primary">Trinus.Co</strong>, atuo como
-                SR Software Engineer, criando arquiteturas sólidas e
-                implementando boas práticas de desenvolvimento. Trabalho com
-                tecnologias como Node.js, NestJS, React e Next.js, atuando em
-                soluções de pagamentos e internet banking e nosso backoffice.
+                {t("p2_1")}
+                <strong className="text-primary">Trinus.Co</strong>
+                {t("p2_2")}
               </p>
             </div>
           </motion.div>
@@ -118,9 +110,9 @@ export const About = () => {
           className="mt-16 grid grid-cols-2 lg:grid-cols-4 gap-8"
         >
           {[
-            { value: "7+", label: "Anos de Experiência" },
-            { value: "10+", label: "Tecnologias" },
-            { value: "100%", label: "Comprometimento" },
+            { value: "10", label: t("s1") },
+            { value: "10+", label: t("s2") },
+            { value: "100%", label: t("s3") },
           ].map((stat, index) => (
             <motion.div
               key={stat.label}
@@ -141,3 +133,4 @@ export const About = () => {
     </section>
   );
 };
+

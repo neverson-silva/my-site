@@ -8,8 +8,11 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { useTranslations } from "next-intl";
 
 export const Contact = () => {
+  const t = useTranslations("Contact");
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -31,11 +34,11 @@ export const Contact = () => {
         body: JSON.stringify(formData),
       });
 
-      toast.success("Mensagem enviada com sucesso!");
+      toast.success(t("success"));
       setFormData({ name: "", email: "", message: "" });
     } catch (error) {
-      console.error("Erro ao enviar:", error);
-      toast.error("Erro ao enviar mensagem. Tente novamente mais tarde.");
+      console.error("Error sending:", error);
+      toast.error(t("error"));
     } finally {
       setIsSubmitting(false);
     }
@@ -52,10 +55,10 @@ export const Contact = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl lg:text-5xl font-bold mb-4">
-            Entre em <span className="text-gradient">Contato</span>
+            {t("title1")} <span className="text-gradient">{t("title2")}</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Interessado em trabalhar junto? Vamos conversar sobre seu projeto.
+            {t("subtitle")}
           </p>
         </motion.div>
 
@@ -69,10 +72,9 @@ export const Contact = () => {
             className="space-y-8"
           >
             <div>
-              <h3 className="text-2xl font-bold mb-6">Vamos conversar!</h3>
+              <h3 className="text-2xl font-bold mb-6">{t("lets_talk")}</h3>
               <p className="text-muted-foreground mb-8">
-                Estou sempre aberto a discutir novos projetos, ideias criativas
-                ou oportunidades de fazer parte de suas visões.
+                {t("lets_talk_desc")}
               </p>
             </div>
 
@@ -155,12 +157,12 @@ export const Contact = () => {
                       htmlFor="name"
                       className="block text-sm font-medium mb-2"
                     >
-                      Nome
+                      {t("label_name")}
                     </label>
                     <Input
                       id="name"
                       type="text"
-                      placeholder="Seu nome"
+                      placeholder={t("placeholder_name")}
                       value={formData.name}
                       onChange={(e) =>
                         setFormData({ ...formData, name: e.target.value })
@@ -175,12 +177,12 @@ export const Contact = () => {
                       htmlFor="email"
                       className="block text-sm font-medium mb-2"
                     >
-                      Email
+                      {t("label_email")}
                     </label>
                     <Input
                       id="email"
                       type="email"
-                      placeholder="seu@email.com"
+                      placeholder={t("placeholder_email")}
                       value={formData.email}
                       onChange={(e) =>
                         setFormData({ ...formData, email: e.target.value })
@@ -195,11 +197,11 @@ export const Contact = () => {
                       htmlFor="message"
                       className="block text-sm font-medium mb-2"
                     >
-                      Mensagem
+                      {t("label_message")}
                     </label>
                     <Textarea
                       id="message"
-                      placeholder="Conte-me sobre seu projeto..."
+                      placeholder={t("placeholder_message")}
                       rows={6}
                       value={formData.message}
                       onChange={(e) =>
@@ -217,11 +219,11 @@ export const Contact = () => {
                     disabled={isSubmitting}
                   >
                     {isSubmitting ? (
-                      <span>Enviando...</span>
+                      <span>{t("submitting")}</span>
                     ) : (
                       <>
                         <Send className="w-5 h-5 mr-2 group-hover:translate-x-1 transition-smooth" />
-                        Enviar Mensagem
+                        {t("submit")}
                       </>
                     )}
                   </Button>

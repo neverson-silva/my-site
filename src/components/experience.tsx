@@ -4,102 +4,94 @@ import { motion } from "framer-motion";
 import { Briefcase, Calendar } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
-
-const experiences = [
-  {
-    period: "2024 - Atual",
-    company: "Trinus.Co",
-    role: "Sr. Software Engineer",
-    description:
-      "Atuação focada no desenvolvimento e sustentação de integrações complexas com serviços financeiros, incluindo soluções de pagamento, onboarding digital, internet banking e canais de atendimento. Trabalho com arquiteturas orientadas a eventos, APIs seguras e escaláveis, garantindo a disponibilidade e conformidade regulatória das plataformas.",
-    technologies: [
-      "React",
-      "TypeScript",
-      "Node.js",
-      "Keycloak",
-      "Azure",
-      "AWS",
-      "PostgreSQL",
-      "Clean Architecture",
-      "Event Driven Architecture",
-      "DDD",
-      "SQL Server",
-    ],
-  },
-  {
-    period: "2021 - 2024",
-    company: "Sotran",
-    role: "Engenheiro de Software PL",
-    description: `
-      Como desenvolvedor Fullstack em uma squad de Pagamentos, foquei na construção de interfaces e soluções voltadas para produtos financeiros, incluindo contas digitais, gestão de cartões, pagamento de fretes e tags de pedágio. Atuei em diversos projetos de integração com Banking as a Service (Dock), priorizando a criação de interfaces responsivas para o Backoffice financeiro da empresa em React.js, garantindo uma experiência intuitiva e eficiente para os usuários.
-
-      Principais atividades e tecnologias:
-
-      Desenvolvimento de interfaces de backoffice financeiro em React.js, com foco em usabilidade e responsividade.
-      Implementação de integrações com sistemas bancários e serviços financeiros utilizando Node.js e Kotlin, e monitoramento de aplicações em Azure.
-      `,
-    technologies: [
-      "Java",
-      "Node.js",
-      "React",
-      "Nest.js",
-      "Spring Boot",
-      "SQL Server",
-      "SpringBoot",
-      "PostgreSQL",
-      "GitLab CI/CD",
-      "GCP",
-    ],
-  },
-  {
-    period: "2020 - 2021",
-    company: "Analista e Desenvolvedor de Sistemas Pleno",
-    role: "Tata Consultancy Service",
-    description:
-      "Análise, Desenvolvimento e manutenção de sistemas da área de Petróleo e Gás.",
-    technologies: [
-      "Java",
-      "JSF",
-      "JSP",
-      "Jasper Reports",
-      "Hibernate",
-      "HTML",
-      "CSS e Javascript",
-      "Maven",
-      "RichFaces",
-      "WebLogic",
-      "Jira",
-    ],
-  },
-  {
-    period: "2016 - 2020",
-    company: "Cogna Educação",
-    role: "Analista de Sistemas Júnior",
-    description: `Desenvolvimento de soluções para educação na Kroton Educacional.
-
-Atuação na manutenção e desenvolvimento de novas funcionalidades em sistemas administrativos em Grails e Groovy e Portal do Aluno EAD construindo serviços nas tecnologias Nest.js(Node.js) e Spring Boot para integração ao novo portal construído com as tecnologias ServiceNow e Angular.`,
-    technologies: [
-      "Java",
-      "Spring Boot",
-      "JUnit",
-      "Groovy e Grails",
-      "PL/SQL",
-      "Node.js",
-      "Typescript",
-      "Nest.js",
-      "Jest",
-      "Docker",
-      "Kubernetes",
-      "Azure DevOps",
-      "Jenkins",
-      "GitFlow",
-      "Scrum",
-      "Angular",
-    ],
-  },
-];
+import { useTranslations } from "next-intl";
 
 export const Experience = () => {
+  const t = useTranslations("Experience");
+
+  const experiences = [
+    {
+      period: t("exp1_time"),
+      company: t("exp1_co"),
+      role: t("exp1_role"),
+      description: t("exp1_desc"),
+      technologies: [
+        "React",
+        "TypeScript",
+        "Node.js",
+        "Keycloak",
+        "Azure",
+        "AWS",
+        "PostgreSQL",
+        "Clean Architecture",
+        "Event Driven Architecture",
+        "DDD",
+        "SQL Server",
+      ],
+    },
+    {
+      period: t("exp2_time"),
+      company: t("exp2_co"),
+      role: t("exp2_role"),
+      description: t("exp2_desc"),
+      technologies: [
+        "Java",
+        "Node.js",
+        "React",
+        "Nest.js",
+        "Spring Boot",
+        "SQL Server",
+        "SpringBoot",
+        "PostgreSQL",
+        "GitLab CI/CD",
+        "GCP",
+      ],
+    },
+    {
+      period: t("exp3_time"),
+      company: t("exp3_co"),
+      role: t("exp3_role"),
+      description: t("exp3_desc"),
+      technologies: [
+        "Java",
+        "JSF",
+        "JSP",
+        "Jasper Reports",
+        "Hibernate",
+        "HTML",
+        "CSS e Javascript",
+        "Maven",
+        "RichFaces",
+        "WebLogic",
+        "Jira",
+      ],
+    },
+    {
+      period: t("exp4_time"),
+      company: t("exp4_co"),
+      role: t("exp4_role"),
+      description: t("exp4_desc"),
+      technologies: [
+        "Java",
+        "Spring Boot",
+        "JUnit",
+        "Groovy e Grails",
+        "PL/SQL",
+        "Node.js",
+        "Typescript",
+        "Nest.js",
+        "Jest",
+        "Docker",
+        "Kubernetes",
+        "Azure DevOps",
+        "Jenkins",
+        "GitFlow",
+        "Scrum",
+        "Angular",
+      ],
+    },
+  ];
+
   return (
     <section id="experience" className="py-20 px-4 bg-muted/20">
       <div className="container mx-auto">
@@ -111,10 +103,10 @@ export const Experience = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl lg:text-5xl font-bold mb-4">
-            Experiência <span className="text-gradient">Profissional</span>
+            {t("title1")} <span className="text-gradient">{t("title2")}</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Minha trajetória de crescimento e evolução na área de tecnologia
+            {t("subtitle")}
           </p>
         </motion.div>
 
@@ -156,7 +148,7 @@ export const Experience = () => {
                         </div>
                       </div>
 
-                      <p className="text-muted-foreground mb-4">
+                      <p className="text-muted-foreground mb-4 whitespace-pre-wrap">
                         {exp.description}
                       </p>
 
@@ -190,3 +182,4 @@ export const Experience = () => {
     </section>
   );
 };
+

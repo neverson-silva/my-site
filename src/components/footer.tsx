@@ -1,11 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Github, Heart, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useTranslations } from "next-intl";
 
 export const Footer = () => {
-  const currentYear = new Date().getFullYear();
+  const t = useTranslations("Footer");
 
   return (
     <footer className="py-12 px-4 border-t border-border">
@@ -21,7 +22,7 @@ export const Footer = () => {
           >
             <h3 className="text-2xl font-bold text-gradient mb-2">nbs.dev</h3>
             <p className="text-muted-foreground text-sm">
-              Desenvolvedor Fullstack Sênior
+              {t("role")}
             </p>
           </motion.div>
 

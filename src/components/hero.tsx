@@ -3,9 +3,15 @@
 import { motion } from "framer-motion";
 import { Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import profileImage from '@/assets/images/profile.jpeg';
+import { useTranslations } from "next-intl";
 
-const profileImage = process.env.NEXT_PUBLIC_PROFILE_URL;
+console.log('JSON', JSON.stringify(profileImage))
+
+
 export const Hero = () => {
+  const t = useTranslations("Hero");
+
   return (
     <section
       id="hero"
@@ -22,7 +28,7 @@ export const Hero = () => {
             <div className="relative w-64 h-64 lg:w-80 lg:h-80">
               <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary to-primary/20 animate-glow-pulse" />
               <img
-                src={profileImage as any}
+                src={profileImage.src}
                 alt="Neverson Bento da Silva"
                 className="relative w-full h-full rounded-full object-cover border-4 border-primary/30"
               />
@@ -36,7 +42,7 @@ export const Hero = () => {
               transition={{ delay: 0.2, duration: 0.6 }}
             >
               <h1 className="text-5xl lg:text-7xl font-bold mb-4">
-                Olá
+                {t("greeting")}
                 <motion.span
                   className="inline-block ml-4"
                   animate={{ rotate: [0, 14, -8, 14, -4, 10, 0] }}
@@ -51,7 +57,7 @@ export const Hero = () => {
                 </motion.span>
               </h1>
               <h2 className="text-3xl lg:text-4xl text-gradient font-bold mb-6">
-                Sou Neverson Silva
+                {t("name")}
               </h2>
             </motion.div>
 
@@ -63,13 +69,13 @@ export const Hero = () => {
             >
               <pre className="text-left text-sm lg:text-base text-muted-foreground">
                 <code>
-                  {`//Desenvolvedor Full Stack
+                  {`${t("code_comment")}
 const profile = {
   nome: "Neverson Bento da Silva",
-  cargo: "SR Software Engineer",
-  empresa: "Trinus.Co",
-  experiencia: "7+ anos",
-  segmentos: ["Educação Ensino Superior", "Logística", "Meios de Pagamento", "Banking"],
+  cargo: "${t("role")}",
+  empresa: "${t("company")}",
+  experiencia: "${t("experience")}",
+  segmentos: [${t("segments")}],
   stack: ["Node.js", "NestJS", "Java", "Spring Boot",, "React", "Next.js"]
 }`}
                 </code>
@@ -82,9 +88,7 @@ const profile = {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.6 }}
             >
-              Com mais de 7 anos de experiência, atuo como desenvolvedor full
-              stack especializado em soluções financeiras, sistemas de
-              pagamentos e arquitetura BaaS (Banking as a Service).
+              {t("description")}
             </motion.p>
 
             <motion.div

@@ -12,75 +12,78 @@ import {
   Server,
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
-
-const skillCategories = [
-  {
-    title: "Frontend",
-    icon: Laptop,
-    skills: [
-      "React / Next.js",
-      "TypeScript",
-      "JavaScript",
-      "HTML5 / CSS3",
-      "Tailwind CSS",
-      "React Native",
-    ],
-  },
-  {
-    title: "Backend",
-    icon: Server,
-    skills: [
-      "Node.js",
-      "NestJS",
-      "Java",
-      "Spring Boot",
-      "Express.js",
-      "REST APIs",
-      "Kotlin",
-      "Quarkus",
-    ],
-  },
-  {
-    title: "Bando de Dados",
-    icon: Database,
-    skills: [
-      "PostgreSQL",
-      "MySQL",
-      "MongoDB",
-      "Redis",
-      "Oracle PLSQL",
-      "SQL Server",
-      "Prisma",
-      "TypeORM",
-    ],
-  },
-  {
-    title: "DevOps & Cloud",
-    icon: Cloud,
-    skills: ["Docker", "AWS", "Azure", "CI/CD", "GitLab Pipeline"],
-  },
-  {
-    title: "Arquitetura",
-    icon: Blocks,
-    skills: ["Clean Architecture", "DDD", "Event-Driven", "RESTful API"],
-  },
-  {
-    title: "Ferramentas e Metodologias",
-    icon: Box,
-    skills: [
-      "Git",
-      "Scrum",
-      "Kanban",
-      "TDD",
-      "Clean Code",
-      "Code Review",
-      "Jira",
-      "Figma",
-    ],
-  },
-];
+import { useTranslations } from "next-intl";
 
 export const Skills = () => {
+  const t = useTranslations("Skills");
+
+  const skillCategories = [
+    {
+      title: t("cat1"),
+      icon: Laptop,
+      skills: [
+        "React / Next.js",
+        "TypeScript",
+        "JavaScript",
+        "HTML5 / CSS3",
+        "Tailwind CSS",
+        "React Native",
+      ],
+    },
+    {
+      title: t("cat2"),
+      icon: Server,
+      skills: [
+        "Node.js",
+        "NestJS",
+        "Java",
+        "Spring Boot",
+        "Express.js",
+        "REST APIs",
+        "Kotlin",
+        "Quarkus",
+      ],
+    },
+    {
+      title: t("cat3"),
+      icon: Database,
+      skills: [
+        "PostgreSQL",
+        "MySQL",
+        "MongoDB",
+        "Redis",
+        "Oracle PLSQL",
+        "SQL Server",
+        "Prisma",
+        "TypeORM",
+      ],
+    },
+    {
+      title: t("cat4"),
+      icon: Cloud,
+      skills: ["Docker", "AWS", "Azure", "CI/CD", "GitLab Pipeline"],
+    },
+    {
+      title: t("cat5"),
+      icon: Blocks,
+      skills: ["Clean Architecture", "DDD", "Event-Driven", "RESTful API"],
+    },
+    {
+      title: t("cat6"),
+      icon: Box,
+      skills: [
+        "Git",
+        "Scrum",
+        "Kanban",
+        "TDD",
+        "Clean Code",
+        "Code Review",
+        "Jira",
+        "Figma",
+      ],
+    },
+  ];
+
   return (
     <section id="skills" className="py-20 px-4 bg-muted/20">
       <div className="container mx-auto">
@@ -92,10 +95,10 @@ export const Skills = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl lg:text-5xl font-bold mb-4">
-            Habilidades & <span className="text-gradient">Tecnologias</span>
+            {t("title1")} <span className="text-gradient">{t("title2")}</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Ferramentas e tecnologias que domino para criar soluções completas
+            {t("subtitle")}
           </p>
         </motion.div>
 
@@ -157,11 +160,10 @@ export const Skills = () => {
                 <GitBranch className="w-8 h-8 text-primary" />
                 <div className="text-left">
                   <p className="text-lg font-semibold mb-1">
-                    Sempre aprendendo e evoluindo
+                    {t("info_title")}
                   </p>
                   <p className="text-muted-foreground text-sm">
-                    Atualmente explorando novas abordagens em front-end,
-                    back-end e inteligência artificial
+                    {t("info_desc")}
                   </p>
                 </div>
               </div>

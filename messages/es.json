@@ -1,0 +1,92 @@
+{
+  "Navigation": {
+    "home": "Inicio",
+    "about": "Sobre mí",
+    "experience": "Experiencia",
+    "projects": "Proyectos",
+    "skills": "Habilidades",
+    "contact": "Contacto"
+  },
+  "Hero": {
+    "greeting": "Hola",
+    "name": "Soy Neverson Silva",
+    "description": "Con más de 10 años de experiencia, trabajo como desarrollador full stack especializado en soluciones financieras, sistemas de pagos y arquitectura BaaS (Banking as a Service).",
+    "code_comment": "//Desarrollador Full Stack",
+    "role": "SR Software Engineer",
+    "company": "Trinus.Co",
+    "experience": "7+ años",
+    "segments": "\"Educación Superior\", \"Logística\", \"Medios de Pago\", \"Banca\""
+  },
+  "About": {
+    "title1": "Sobre",
+    "title2": "Mí",
+    "subtitle": "Desarrollador apasionado por la tecnología y la innovación",
+    "heading": "Transformando ideas en soluciones digitales",
+    "p1": "Soy un desarrollador full stack con más de 7 años de experiencia, construyendo sistemas escalables e interfaces modernas para diferentes sectores. Mi trayectoria comenzó en el desarrollo de aplicaciones para entornos virtuales de aprendizaje y portales de estudiantes en una institución de educación superior (EAD), evolucionando hacia plataformas corporativas complejas e integraciones robustas.",
+    "p2_1": "Actualmente en ",
+    "p2_2": ", me desempeño como SR Software Engineer, creando arquitecturas sólidas e implementando buenas prácticas de desarrollo. Trabajo con tecnologías como Node.js, NestJS, React y Next.js, actuando en soluciones de pagos y banca por internet y nuestro backoffice.",
+    "f1_t": "Plataformas Corporativas",
+    "f1_d": "Desarrollo de sistemas complejos y escalables, integrando servicios digitales y construyendo soluciones confiables para diferentes sectores.",
+    "f2_t": "Arquitectura",
+    "f2_d": "Clean Architecture, DDD, microservicios y diseño basado en eventos",
+    "f3_t": "Full Stack",
+    "f3_d": "Node.js, NestJS, React, Next.js y tecnologías modernas",
+    "s1": "Años de Experiencia",
+    "s2": "Tecnologías",
+    "s3": "Compromiso"
+  },
+  "Experience": {
+    "title1": "Experiencia",
+    "title2": "Profesional",
+    "subtitle": "Mi trayectoria de crecimiento y evolución en el área tecnológica",
+    "exp1_role": "Sr. Software Engineer",
+    "exp1_co": "Trinus.Co",
+    "exp1_desc": "Trabajo enfocado en el desarrollo y mantenimiento de integraciones complejas con servicios financieros, incluyendo soluciones de pago, onboarding digital, banca por internet y canales de atención. Trabajo con arquitecturas orientadas a eventos, APIs seguras y escalables, garantizando la disponibilidad y el cumplimiento normativo de las plataformas.",
+    "exp1_time": "2024 - Presente",
+    "exp2_role": "Ingeniero de Software PL",
+    "exp2_co": "Sotran",
+    "exp2_desc": "Como desarrollador Fullstack en un escuadrón de Pagos, me enfoqué en la construcción de interfaces y soluciones para productos financieros, incluyendo cuentas digitales, gestión de tarjetas, pago de fletes y peajes. Trabajé en varios proyectos de integración con Banking as a Service (Dock), priorizando la creación de interfaces responsivas para el Backoffice financiero de la empresa en React.js.\n\nPrincipales actividades y tecnologías:\n\nDesarrollo de interfaces de backoffice financiero en React.js, con enfoque en usabilidad y capacidad de respuesta.\nImplementación de integraciones con sistemas bancarios y servicios financieros utilizando Node.js y Kotlin, y monitoreo de aplicaciones en Azure.",
+    "exp2_time": "2021 - 2024",
+    "exp3_role": "Analista y Desarrollador de Sistemas Pleno",
+    "exp3_co": "Tata Consultancy Service",
+    "exp3_desc": "Análisis, Desarrollo y mantenimiento de sistemas para el sector de Petróleo y Gas.",
+    "exp3_time": "2020 - 2021",
+    "exp4_role": "Analista de Sistemas Junior",
+    "exp4_co": "Cogna Educação",
+    "exp4_desc": "Desarrollo de soluciones educativas en Kroton Educacional.\n\nTrabajando en el mantenimiento y desarrollo de nuevas funcionalidades en sistemas administrativos usando Grails y Groovy, y servicios en el Portal del Alumno construidos en Nest.js(Node.js) y Spring Boot para la integración con el nuevo portal construido con ServiceNow y Angular.",
+    "exp4_time": "2016 - 2020"
+  },
+  "Skills": {
+    "title1": "Habilidades y",
+    "title2": "Tecnologías",
+    "subtitle": "Herramientas y tecnologías que domino para crear soluciones completas",
+    "cat1": "Frontend",
+    "cat2": "Backend",
+    "cat3": "Base de Datos",
+    "cat4": "DevOps y Cloud",
+    "cat5": "Arquitectura",
+    "cat6": "Herramientas y Metodologías",
+    "info_title": "Siempre aprendiendo y evolucionando",
+    "info_desc": "Actualmente explorando nuevos enfoques en front-end, back-end e inteligencia artificial"
+  },
+  "Contact": {
+    "title1": "Ponte en",
+    "title2": "Contacto",
+    "subtitle": "¿Interesado en trabajar juntos? Hablemos sobre tu proyecto.",
+    "lets_talk": "¡Hablemos!",
+    "lets_talk_desc": "Siempre estoy abierto a discutir nuevos proyectos, ideas creativas u oportunidades de ser parte de tus visiones.",
+    "label_name": "Nombre",
+    "placeholder_name": "Tu nombre",
+    "label_email": "Correo electrónico",
+    "placeholder_email": "tu@email.com",
+    "label_message": "Mensaje",
+    "placeholder_message": "Cuéntame sobre tu proyecto...",
+    "submit": "Enviar Mensaje",
+    "submitting": "Enviando...",
+    "success": "¡Mensaje enviado con éxito!",
+    "error": "Error al enviar el mensaje. Inténtalo de nuevo más tarde."
+  },
+  "Footer": {
+    "role": "Desarrollador Fullstack Senior"
+  }
+}

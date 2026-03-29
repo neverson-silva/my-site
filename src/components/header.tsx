@@ -6,16 +6,20 @@ import { useEffect, useState } from "react";
 import { ThemeToggle } from "@/components/toggle-theme";
 import { Button } from "@/components/ui/button";
 
-const navItems = [
-  { name: "Início", href: "#hero" },
-  { name: "Sobre", href: "#about" },
-  { name: "Experiência", href: "#experience" },
-  { name: "Projetos", href: "#projects" },
-  { name: "Habilidades", href: "#skills" },
-  { name: "Contato", href: "#contact" },
-];
+import { useTranslations } from "next-intl";
+import { LanguageSwitcher } from "./language-switcher";
 
 export const Header = () => {
+  const t = useTranslations("Navigation");
+  const navItems = [
+    { name: t("home"), href: "#hero" },
+    { name: t("about"), href: "#about" },
+    { name: t("experience"), href: "#experience" },
+    { name: t("projects"), href: "#projects" },
+    { name: t("skills"), href: "#skills" },
+    { name: t("contact"), href: "#contact" },
+  ];
+
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -77,14 +81,17 @@ export const Header = () => {
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full" />
                 </motion.a>
               ))}
-              <motion.button
-                className="text-foreground/80 hover:text-primary transition-smooth relative group"
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: (navItems.length - 1) * 0.1 }}
-              >
-                <ThemeToggle />
-              </motion.button>
+              <div className="flex items-center gap-2">
+                <LanguageSwitcher />
+                <motion.button
+                  className="text-foreground/80 hover:text-primary transition-smooth relative group"
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: navItems.length * 0.1 }}
+                >
+                  <ThemeToggle />
+                </motion.button>
+              </div>
             </nav>
 
             <Button
